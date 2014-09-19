@@ -1,4 +1,4 @@
 directPA
 ========
 
-A package for pathway analysis in experiments with multiple perturbation designs.
+A package for directional pathway analysis in experiments with multiple perturbation designs.

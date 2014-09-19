@@ -1,0 +1,14 @@
+Package: directPA
+Type: Package
+Title: Direction Pathway Analysis
+Version: 1.1
+Date: 2014-09-19
+Author: Pengyi Yang & Ellis Patrick
+Maintainer: Pengyi Yang <yangpy7@gmail.com>
+Description: A package for pathway analysis in experiments with multiple perturbation designs.
+License: GPL-3
+Suggests: rgl
+Packaged: 2014-09-19 03:11:35 UTC; Pengyi
+NeedsCompilation: no
+Repository: CRAN
+Date/Publication: 2013-10-22 08:17:12
