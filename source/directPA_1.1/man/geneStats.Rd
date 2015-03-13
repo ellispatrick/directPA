@@ -4,13 +4,14 @@
 \alias{geneStats}
 \title{Gene Level Statistics}
 \usage{
-geneStats(T, method = "OSP")
+geneStats(T, method="OSP")
 }
 \arguments{
-\item{T}{a vector of statistics (z-scores) with each element correspond to a treatment vs control comparison.}
+\item{T}{a vector of statistics (z-scores converted) with each element correspond to a treatment vs control
+comparison.}
 
-\item{method}{the p-value integration method for combining accross multiple treatments. Available methods are
-Stouffer, OSP, Fisher, and maxP. The default method is OSP.}
+\item{method}{the p-value integration method for combining accross multiple treatments. Available methods
+are Stouffer, OSP, Fisher, and maxP. The default method is OSP.}
 }
 \value{
 a p-value after integration across treatments.
@@ -20,10 +21,16 @@ Takes a vector of statistics with each element corresponds to a treatment vs con
 and calculates a combined statistics accross multiple treatments.
 }
 \examples{
-# Load the example data.
+# load the example data
 data(PM)
 
-# (1) For three perturbatins vesus controls, use three dimentional rotation.
-Tc <- cbind(Ins, Wmn, MK)
+# convert statistics into z-scores
+PM.zscores <- apply(PM, 2, function(x){qnorm(rank(x)/(nrow(PM)+1))})
+
+# Rotate the matrix by contrast 1, -1, -1 (i.e. up-regulation, down-regulation, dow-regulation).
+PM.rotated <- rotate3d(PM.zscores, contrast = c(1, -1, -1))
+
+# combine rotated statistics across treatments
+gene.pvalues <- apply(PM.rotated, 1, geneStats)
 }
 

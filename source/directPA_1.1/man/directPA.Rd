@@ -4,22 +4,27 @@
 \alias{directPA}
 \title{Direction Analysis for Pathways and Kinases}
 \usage{
-directPA(Tc, direction, annotation, minSize = 5, gene.method = "OSP",
-  path.method = "Stouffer", visualize = TRUE)
+directPA(Tc, direction, annotation, minSize=5, gene.method="OSP", path.method="Stouffer", visualize=TRUE)
 }
 \arguments{
-\item{Tc}{a numeric matrix. The columns are genes or phosphorylation sites and the columns are treatments vs control statistics.}
+\item{Tc}{a numeric matrix. The columns are genes or phosphorylation sites and the columns are
+treatments vs control statistics.}
 
-\item{direction}{the direction to be tested for enrichment. Either specified as a degree for two-dimensional analysis or as contrast (in a triplet) for three-dimensional analysis.}
+\item{direction}{the direction to be tested for enrichment. Either specified as a degree for
+two-dimensional analysis or as contrast (in a triplet) for three-dimensional analysis.}
 
-\item{annotation}{a list with names correspond to pathways or kinases and elements correspond to genes or substrates belong to each pathway or kinase, respectively.}
+\item{annotation}{a list with names correspond to pathways or kinases and elements correspond to
+genes or substrates belong to each pathway or kinase, respectively.}
 
-\item{minSize}{the size of annotation groups to be considered for calculating enrichment. Groups that are smaller than the minSize will be removed from the analysis.}
+\item{minSize}{the size of annotation groups to be considered for calculating enrichment. Groups
+that are smaller than the minSize will be removed from the analysis.}
 
-\item{gene.method}{the method to be used for integrating statistics across treatments for each gene or phosphorylation site.  Available methods are Stouffer, OSP, Fisher, and maxP.
+\item{gene.method}{the method to be used for integrating statistics across treatments for each gene
+or phosphorylation site.  Available methods are Stouffer, OSP, Fisher, and maxP.
 Default method is OSP.}
 
-\item{path.method}{the method to be used for integrating statistics of all genes or phosphorylation sites that belongs to a pathway or kinase. Available methods are Stouffer, OSP, Fisher, and maxP.
+\item{path.method}{the method to be used for integrating statistics of all genes or phosphorylation
+sites that belongs to a pathway or kinase. Available methods are Stouffer, OSP, Fisher, and maxP.
 Default method is Stouffer.}
 
 \item{visualize}{whether to visualize the}
@@ -28,8 +33,10 @@ Default method is Stouffer.}
 a list of enrichment for pathways or kinases
 }
 \description{
-The main function of direction Analysis. This function takes in a matrix of test statistics with two (2-dimensional space) or three (3-dimensional space) columns, the
-direction of interests, and the annotation list such as pathway annotation or kinase-substrate annotation, and test for enrichment of pathways or kinases on the specified direction.
+The main function of direction Analysis. This function takes in a matrix of test statistics with
+two (2-dimensional space) or three (3-dimensional space) columns, the direction of interests, and
+the annotation list such as pathway annotation or kinase-substrate annotation, and test for
+enrichment of pathways or kinases on the specified direction.
 }
 \examples{
 ## I. for kinase anlaysis on a phosphoproteomics dataset (Humphrey et al. Cell Metab., 2013)
@@ -64,7 +71,7 @@ data(PM)
 data(Pathways)
 
 # display reactome pathways. Could be replaced by any other pathway databases
-Pathways.reactome
+Pathways.reactome[1:5]
 
 # direction pathway analysis in 3-dimensional space. Implemnted as rotating by contrast
 # (1) test combined effect of all 3 treatments (stimulation and inhibitions) vs control (basal)
