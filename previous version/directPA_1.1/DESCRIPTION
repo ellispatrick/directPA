@@ -1,0 +1,10 @@
+Package: directPA
+Type: Package
+Title: Direction Pathway Analysis
+Version: 1.1
+Date: 2015-03-13
+Author: Pengyi Yang & Ellis Patrick
+Maintainer: Pengyi Yang <yangpy7@gmail.com>
+Description: A package for pathway or kinase analysis in experiments with multiple treatment designs.
+License: GPL-3
+Depends: R (>= 2.10.0), rgl, calibrate
