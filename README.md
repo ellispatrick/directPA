@@ -2,7 +2,7 @@
 ========
 
 #### Description
-`directPA' is a package designed for analyzing (1) gene/protein expression data using microarray, RNA-seq, or proteomics data, and (2) kinase enrichment using phosphoproteomics data. It intergrates multiple experimental treatments and test the effect of each combination of treatments using a directional approach. 
+`directPA' is a package designed to identify combinatorial effects of multiple treatments and/or perturbations on pathways and kinases profiled by microarray, RNA-seq, proteomics, or phosphoproteomics data.
 
 #### Download and install
 The relsease version can be downloaded from CRAN [link](http://cran.r-project.org/web/packages/directPA/);

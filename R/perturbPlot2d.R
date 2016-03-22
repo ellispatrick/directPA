@@ -4,7 +4,7 @@
 #' annotation list such as pathway annotation or kinase-substrate annotation, and visualize the enrichment
 #' of pathways or kinases in direction specific manner.
 #' 
-#' @usage directEnrichPlot2d(Tc, annotation, minSize=5, ...)
+#' @usage perturbPlot2d(Tc, annotation, minSize=5, ...)
 #' @param Tc a numeric matrix. The columns are genes or phosphorylation sites and the columns are treatments 
 #' vs control statistics.
 #' @param annotation a list with names correspond to pathways or kinases and elements correspond to genes or

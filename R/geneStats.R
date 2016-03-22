@@ -1,4 +1,4 @@
-#' Gene Level Statistics
+#' Molecule Level Statistics
 #' 
 #' Takes a vector of statistics with each element corresponds to a treatment vs control comparison, 
 #' and calculates a combined statistics accross multiple treatments.
