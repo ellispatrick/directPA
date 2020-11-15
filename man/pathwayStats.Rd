@@ -48,4 +48,3 @@ gene.zscores <- qnorm(gene.pvalues, lower.tail = FALSE)
 gst <- t(sapply(Pathways.reactome, pathwayStats, gene.zscores))
 
 }
-

@@ -8,7 +8,7 @@ directPA(Tc, direction, annotation, minSize=5, gene.method="OSP",
 path.method="Stouffer", visualize=TRUE, ...)
 }
 \arguments{
-\item{Tc}{a numeric matrix. The columns are genes and the columns are treatments vs control statistics.}
+\item{Tc}{a numeric matrix. Rows are genes and columns are treatments vs control statistics.}
 
 \item{direction}{the direction to be tested for enrichment. Either specified as a degree for 
 two-dimensional analysis or as contrast (in a triplet) for three-dimensional analysis.}
@@ -70,4 +70,3 @@ dPA <- directPA(Tc=PM, direction=c(1,-1,1), annotation=Pathways.reactome)
 dPA$gst[order(unlist(dPA$gst[,1])),][1:20,]
 
 }
-

@@ -34,4 +34,3 @@ PM.rotated <- rotate3d(PM.zscores, contrast = c(1, -1, -1))
 gene.pvalues <- apply(PM.rotated, 1, geneStats)
 
 }
-

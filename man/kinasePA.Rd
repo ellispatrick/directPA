@@ -66,4 +66,3 @@ kPA <- kinasePA(Tc=HEK, direction=pi*5/4, annotation=PhosphoSite.mouse)
 kPA$kinase[order(unlist(kPA$kinase[,1])),][1:20,]
 
 }
-

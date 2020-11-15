@@ -29,4 +29,3 @@ HEK.zscores <- apply(HEK, 2, function(x){qnorm(rank(x)/(nrow(HEK)+1))})
 HEK.rotated <- rotate2d(HEK.zscores, degree = pi/2)
 
 }
-

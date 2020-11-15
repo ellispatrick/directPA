@@ -54,6 +54,6 @@ kinasePA <- function(Tc, direction, annotation, minSize=5, substrate.method="OSP
    dPA <- directPA(Tc, direction, annotation, minSize, gene.method=substrate.method, path.method=kinase.method, visualize, ...)
    kPA <- list()
    kPA$substrate.pvalues <- dPA$gene.pvalues 
-   kPA$kinase <- dPA$gst
+   kPA$kinase <- dPA$pathways
    return(kPA)
 }

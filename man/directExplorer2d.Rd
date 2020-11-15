@@ -5,7 +5,7 @@
 \title{Batch Direction Analysis in 2-dimentional space}
 \usage{
 directExplorer2d(Tc, annotation=NULL, gene.method="OSP", 
-path.method="Stouffer", top=10, ...)
+path.method="Stouffer", top=10, nd=8, ...)
 }
 \arguments{
 \item{Tc}{a numeric matrix with 2 columns. The rows are genes or phosphorylation sites and the columns 
@@ -23,6 +23,8 @@ sites that belongs to a pathway or kinase. Available methods are Stouffer, OSP, 
 Default method is Stouffer.}
 
 \item{top}{the number of entries to be highlighted in the plot.}
+
+\item{nd}{the number of directions to plot (4 or 8)}
 
 \item{...}{parameters for controlling the plot.}
 }
@@ -58,4 +60,3 @@ bda$gene.tab[order(bda$gene.tab[,"--"]),][1:10,]
 bda$path.tab[order(bda$path.tab[,"--"]),][1:10,]
 
 }
-

@@ -29,4 +29,3 @@ PM.zscores <- apply(PM, 2, function(x){qnorm(rank(x)/(nrow(PM)+1))})
 PM.rotated <- rotate3d(PM.zscores, contrast = c(1, -1, -1))
 
 }
-
